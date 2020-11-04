@@ -71,7 +71,6 @@ class Compare {
     Color sColor = getBasicColor(sRed, sGreen, sBlue);
     if (fColor != sColor && fColor != null && sColor != null) {
       if (!fColors.contains(fColor) || !sColors.contains(sColor)) {
-        print("y = $i   x = $j");
         fColors.add(fColor);
         sColors.add(sColor);
       }
@@ -83,9 +82,12 @@ class Compare {
       return Color.fromRGBO(0, 0, 0, 1);
     } else if (204 <= red && 204 <= green && 204 <= blue) {
       return Color.fromRGBO(255, 255, 255, 1);
-    } else if (102 <= red && red <= 153
-        && 102 <= green && green <= 153
-        && 102 <= blue && blue <= 153) {
+    } else if (102 <= red &&
+        red <= 153 &&
+        102 <= green &&
+        green <= 153 &&
+        102 <= blue &&
+        blue <= 153) {
       return Color.fromRGBO(128, 128, 128, 1);
     } else if (153 <= red && green <= 102 && blue <= 102) {
       if (red <= 204) {
